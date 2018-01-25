@@ -1,0 +1,319 @@
+# função
+
+type(28)
+
+# int('Hello')
+
+# converte valor de ponto flutuante para inteiro
+int(3.3333334)
+
+# funções matemáticas
+
+import math
+
+degrees = 30
+rad = degrees / 180 * math.pi
+math.sin(rad)
+
+
+math.sqrt(2)/2.0
+
+# composição 
+
+x = math.sin(degrees / 360.0 * 2 * math.pi)
+
+# adicionando novas funções
+
+def print_nome():
+	print('Paula')
+	print('Jessica')
+
+
+def repete()
+	print_nome()
+	print_nome()
+
+def p_qq_coisa(salada):
+	print(salada)
+	print(salada)
+
+# p_qq_coisa(math.cos(math.pi))
+
+def soma(n1, n2):
+	soma = n1 + n2
+	return soma
+
+
+# calculadora
+
+def soma(n1, n2):
+	return n1 + n2
+
+
+def subtracao(n1, n2):
+	return n1 - n2
+
+
+def multiplicacao(n1, n2):
+	return n1 * n2
+
+
+def divisao(n1, n2):
+	return n1 / n2
+
+
+def fatorial(n1, n2):
+	return n1 ** n2
+
+# take input from the user
+#print("Select operation.")
+#print("1.Add")
+#print("2.Subtract")
+#print("3.Multiply")
+#print("4.Divide")
+
+choice = int(input("Select operation.\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n"))
+if choice not in [1,2,3,4]:
+	print('Invalid input you idiot!')
+	exit()
+
+a = int(input("first number: "))
+b = int(input("second number: "))
+
+if choice == 1:
+   print ('{} + {} = {}'.format(a, b, soma(a,b)))
+
+elif choice == 2:
+   print ('{} - {} = {}'.format(a, b, subtracao(a,b)))
+
+elif choice == 3:
+   print ('{} * {} = {}'.format(a, b, multiplicacao(a,b)))
+
+elif choice == 4:
+   print ('{} / {} = {}'.format(a, b, divisao(a,b)))
+else:
+   print("Invalid input")
+
+
+# https://github.com/paulinhacnn/rivendell/blob/master/summation/summation.py
+def somatorio(lower_bound, upper_bound, function):
+	    print (sum([function(index) for index in range(lower_bound,
+	                                                   upper_bound + 1)]))
+
+# somatorio(1,5,lambda x:x)
+
+
+import turtle
+
+dd = turtle.Turtle()
+
+def square(dd)
+for i in range(4):
+	dd.fd(100)
+	dd.lt(90)
+
+square(dd)
+
+
+def polygon(t, n, len):
+    angle = 360 / n
+    for i in range(n):
+        dd.fd(length)
+        dd.lt(angle)
+
+polygon(dd, 7, 70)
+
+
+# mais funcoes
+def area(radius):
+    a = math.pi * radius**2
+    return a
+
+
+def area(radius):
+    return math.pi * radius**2
+
+
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    dsquared = dx**2 + dy**2
+    result = math.sqrt(dsquared)
+    return result
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        recurse = factorial(n-1)
+        result = n * recurse
+        return result    
+
+
+def fibonacci (n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
+# Lista
+cheeses = ['Cheddar', 'Edam', 'Gouda']
+numbers = [42, 123]
+empty = []        
+
+
+# percorrendo uma lista
+
+for cheese in cheeses:
+    print(cheese)
+
+
+for i in range(len(numbers)):
+    numbers[i] = numbers[i] * 2    
+
+
+# operacoes com lista
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+
+
+[0] * 4
+
+[1, 2, 3] * 3
+
+
+lista = ['a', 'b', 'c', 'd', 'e', 'f']
+lista[1:3]
+
+lista[:4]
+
+lista[3:]
+
+lista[:]
+
+
+# metodos em lista
+
+lista.append()
+
+lista2 = ['ei', 'oi']
+
+lista.extend(lista2)
+
+lista.sort()
+
+# retorna uma lista com letras minusculas
+
+def capitalize_all(t):
+    res = []
+    for s in t:
+        res.append(s.capitalize())
+    return res
+
+
+t = ['H', 'a', 'j', 'L']
+# retorna uma string so com maiusculo
+def only_upper(t):
+    res = []
+    for s in t:
+        if s.isupper():
+            res.append(s)
+    return res    
+
+
+# excliundo elementos
+
+lista = [1, 2, 4, 5, 6, 7]
+
+x = lista.pop(1)
+
+del lista[1]
+
+# qdo souber qual elemento quer excluir
+
+lista.remove(6)
+
+# Lista e string
+
+p = 'python'
+
+z = list(p)
+
+d = 'Python eh a melhor lgg'
+g = d.split()
+
+# dicionário
+
+end = dict()
+
+dir(end)
+
+end['oi'] = 'ola'
+
+len(end)
+
+'oi' in end
+
+
+vals = end.values()
+
+'ola' is vals
+
+
+# exercicio
+
+def compor_dict(s):
+    d = dict()
+    for c in s:
+        if c not in d:
+            d[c] = 1
+        else:
+            d[c] += 1
+    return d
+
+h = compor_dict('inconstitucionalissimamente') 
+
+h.get()
+
+
+# loop em dict
+
+def print_hist(h):
+    for c in h:
+        print(c, h[c])
+
+# ordem ascendente
+
+for key in sorted(h):
+	print(key, h[key]) 
+
+
+# fibonacci
+known = {0:0, 1:1}
+def fibonacci(n):
+    if n in known:
+        return known[n]
+    res = fibonacci(n-1) + fibonacci(n-2)
+    known[n] = res
+    return res
+
+# Tuplas
+
+t = tuple()
+
+dir(t)
+
+for pair in zip(s, t):
+	print(pair)
+
+list(zip(s, t))
+
+
+t = [('a', 0), ('b', 1), ('c', 2)]
+for letter, number in t:
+    print(number, letter)
